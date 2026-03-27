@@ -40,6 +40,19 @@ The project is organized as follows:
 └── main.py                  # Entry point
 ```
 
+## Download Precomputed Indices
+For 100-view CT reconstruction, LInFBP requires precomputed coordinate indices to accelerate the backprojection process. You can either download the precomputed file or generate it locally.
+
+Please download the **100-view index file** from the link below and place it in the `Results/` directory:
+
+* **Download Link:** [[Link](https://drive.google.com/file/d/1_X0DSq1SlWrhfL7YFBzhGE6dQ7J_xybM/view?usp=drive_link)]
+* **File Name:** `indices_100view.dat`
+
+Alternatively, you can generate the indices directly by running the provided script. This will automatically compute and save `indices_100view.dat` into the `Results/` folder:
+```bash
+python generate_indices.py
+```
+
 ## Usage
 
 The execution logic of this project is centralized in `Solver/initParameter.py` and `main.py`. Please follow the steps below to configure your environment.
